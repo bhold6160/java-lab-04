@@ -1,5 +1,9 @@
 public class ErrorsAndGenerics {
   public static void main(String[] args) {
+    testUserMethods();
+  }
+
+  public static void testUserMethods() {
     User newUser = new User("bhold@me.com", "bholderman", "Brandon", 27);
 
     try {
