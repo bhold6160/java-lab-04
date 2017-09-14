@@ -8,8 +8,18 @@ public class ErrorsAndGenerics {
       System.out.println(exception + " " + exception.description);
     }
 
+    User returningUser = new User("bhold@me.com", "bholderman", "Brandon", 27);
+
     try {
-      newUser.logout();
+      returningUser.logout();
+    } catch(UserException exception) {
+      System.out.println(exception + " " + exception.description);
+    }
+
+    User anotherNewUser = new User("jsmith@bob.com", "johnsmith", "John", 183);
+
+    try {
+      anotherNewUser.signup();
     } catch(UserException exception) {
       System.out.println(exception + " " + exception.description);
     }

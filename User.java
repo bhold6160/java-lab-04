@@ -1,5 +1,6 @@
 public class User extends Person {
   boolean checkLogin = false;
+  boolean checkSignup = false;
   String email;
   String username;
 
@@ -26,5 +27,14 @@ public class User extends Person {
 
     this.checkLogin = false;
     System.out.println(this.username + " has successfully been logged out.");
+  }
+
+  public void signup() throws UserException {
+    if (this.checkSignup) {
+      throw new UserException(this.username + " has already signed up!");
+    }
+
+    this.checkSignup = true;
+    System.out.println(this.username + " has signed up for our news letter!");
   }
 }
